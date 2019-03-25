@@ -58,8 +58,16 @@ function arrTostring(arr) {
 console.log(arrTostring(["B", "E", "R", "l", "i", "N"]));
 
 // 6. Function that takes one array of strings and returns of the sum of the strings' lenghts combined with the array length
+const cityStrings = ["Berlin", "Barcelona", "Madrid"];
+
 function sumLengths(array) {
   let combinedStrings = array.join("");
   return array.length + combinedStrings.length;
 }
-console.log(sumLengths(["Berlin", "Barcelona", "Madrid"])); // 24
+console.log(sumLengths(cityStrings)); // 24
+
+// Alternative with reduce() function
+const lengthSums = cityStrings.reduce((acc, val) => {
+  return acc + val.length;
+}, cityStrings.length);
+console.log(lengthSums);

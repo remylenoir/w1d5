@@ -118,3 +118,9 @@ console.log(nums);
 
 // Short condtion statement
 // const a = condition ? true : false
+
+// Sum values of an array
+const sum = nums.reduce((acc, val) => {
+  return acc + val;
+}, 0);
+console.log(sum);
